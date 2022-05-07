@@ -1,0 +1,6 @@
+tags
+tags.lock
+tags.temp
+/doc
+/target
+/Cargo.lock
