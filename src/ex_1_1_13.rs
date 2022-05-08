@@ -1,5 +1,5 @@
-//! # Excercise 1.1.13
-//! write a code fragment to print the transposition (rows and columns changed) of a
+//! # Exercise 1.1.13, p. 56
+//! Write a code fragment to print the transposition (rows and columns changed) of a
 //! two-dimensional array with M rows and N columns
 //!
 //! ## Example
@@ -80,7 +80,7 @@ mod tests {
     fn column_only_matrix() {
         let result = transpose(&vec![vec![true, false, false]]);
         let expected = vec![vec![true], vec![false], vec![false]];
-            
+
         assert!(matrix_eq(&result, &expected));
     }
 
@@ -88,7 +88,7 @@ mod tests {
     fn row_only_matrix() {
         let result = vec![vec![true], vec![false], vec![false]];
         let expected = transpose(&vec![vec![true, false, false]]);
-            
+
         assert!(matrix_eq(&result, &expected));
     }
 }

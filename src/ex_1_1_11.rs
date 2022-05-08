@@ -1,4 +1,4 @@
-//! # Exercise 1.1.11, p.56
+//! # Exercise 1.1.11, p. 56
 //!
 //! Write a code fragment that prints the contents of a two-dimensional boolean array, using * to
 //! represent `true` and a space to represent `false`. Include row and column numbers.
@@ -13,7 +13,7 @@
 //! // creating formatted strings is weird
 //! let output = "0 *  \n\
 //!               1  * \n\
-//!               2  * 
+//!               2  *
 //!   012";
 //!
 //! assert_eq!(matrix_to_string(&matrix), output);
@@ -32,9 +32,8 @@ pub fn matrix_to_string(matrix: &Vec<Vec<bool>>) -> String {
     let mut result = String::new();
     let convert_value = |val| match val {
         true => String::from("*"),
-        false => String::from(" ")
+        false => String::from(" "),
     };
-
 
     for row_num in 0..row_count {
         let line = format!(

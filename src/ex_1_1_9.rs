@@ -1,6 +1,7 @@
-//! Exercise 1.1.9, p. 55
+//! # Exercise 1.1.9, p. 55
 //!
 //! Write a code fragment that puts the binary representation of a positive integer N into a String s.
+//! # Example
 //! ```
 //! use algorithms_lib::ex_1_1_9::*;
 //! assert_eq!(integer_to_binary_string(13), "1101");

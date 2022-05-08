@@ -1,4 +1,4 @@
-//! # Exercise 1.1.14
+//! # Exercise 1.1.14, p. 56
 //!
 //! Write a static method lg() that takes an `int` value N as argument and returns the largest
 //! `int` not larger than the base-2 logarithm of N. Do *not* use math.
@@ -12,8 +12,7 @@
 //! assert_eq!(lg(6), 2);
 //! ```
 
-
-pub fn lg(n: u32)-> u32 {
+pub fn lg(n: u32) -> u32 {
     if n == 0 {
         panic!("Cannot compute the logarith of 0");
     }
@@ -25,9 +24,20 @@ pub fn lg(n: u32)-> u32 {
         current_val *= 2;
 
         if current_val > n {
-            return i-1;
+            return i - 1;
         }
     }
 
     unreachable!("The for loop completed for n={}", n);
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    #[should_panic]
+    fn panic_for_0() {
+        lg(0);
+    }
 }
